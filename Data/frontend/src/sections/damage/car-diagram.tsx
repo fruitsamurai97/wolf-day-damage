@@ -126,7 +126,7 @@ export function CarDiagram({ damages = [], operations = [], heat, width = 250, s
 
   return (
     <Stack alignItems="center" spacing={1}>
-      <svg viewBox="0 0 240 360" width={width} role="img" aria-label="Fahrzeug von oben, Schadenzonen markiert">
+      <svg viewBox="0 0 240 374" width={width} role="img" aria-label="Fahrzeug von oben, Schadenzonen markiert">
         {WHEELS.map((w, i) => (
           <rect key={i} x={w.x} y={w.y} width={14} height={40} rx={6} fill="#546E7A" opacity={0.55} />
         ))}
@@ -154,7 +154,7 @@ export function CarDiagram({ damages = [], operations = [], heat, width = 250, s
             </g>
           );
         })}
-        <text x={120} y={356} textAnchor="middle" fontSize={8} fill={NEUTRAL_STROKE}>
+        <text x={120} y={369} textAnchor="middle" fontSize={8} fill={NEUTRAL_STROKE}>
           {t('carCaption')}
         </text>
       </svg>
