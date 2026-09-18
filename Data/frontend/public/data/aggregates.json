@@ -264,7 +264,7 @@
   "Motorhaube + Stoßstange vorne rechts": 5
  },
  "ops_replace_by_part": {
-  "windschutzscheibe": 47,
+  "windschutzscheibe": 37,
   "motorhaube": 30,
   "heckklappe": 27,
   "stossfaenger_vorne": 26,
@@ -278,7 +278,7 @@
   "tuer_vorne": 2
  },
  "ops_ri_by_part": {
-  "zierleiste_anbauteil": 108,
+  "zierleiste_anbauteil": 98,
   "rueckleuchte": 92,
   "scheinwerfer": 71,
   "kuehlergrill": 26,
@@ -348,7 +348,7 @@
   "300": 50,
   "500": 42
  },
- "generated_at": "2026-09-18T13:16:30",
+ "generated_at": "2026-09-18T18:56:31",
  "reliability": {
   "n_test": 977,
   "n_dev": 20,

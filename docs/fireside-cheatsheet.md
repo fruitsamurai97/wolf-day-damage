@@ -11,9 +11,9 @@ On reçoit 1 000 dossiers où l'info de dommage est enfermée dans des **notes a
 | # | Chiffre | Ce qu'il prouve |
 |---|---|---|
 | 1 | **99,9 % F1 zones · 100 % type de cas · 100 % assurance · 100 % citations verbatim · 0 perdu** (sur 977 cas jamais vus) | l'extraction est fiable et mesurée, pas affirmée |
-| 2 | **Sévérité DeepSeek 68,7 %** vs **plafond 79,5 %** (mêmes 977 cas) | on capte ~86 % du signal *extractible* |
+| 2 | **Sévérité DeepSeek 68,7 %** vs **plafond 79,5 %** (les 434 cas dommages) | on capte ~86 % du signal *extractible* |
 | 3 | Shootout /150 : XGBoost **82,0 %** · LightGBM **65,3 %** (écart 17 pts) | overfitting : ils mémorisent (voir §questions) |
-| 4 | **216 remplacements → 389 opérations de dépose/repose (R&I)** | du travail facturable invisible dans la note brute |
+| 4 | **206 remplacements → 379 opérations de dépose/repose (R&I)** | du travail facturable invisible dans la note brute |
 | 5 | **668 dossiers ouverts, âge médian 150 j** · **41,3 %** = parking/manœuvre · **2 seuls termes** hors vocabulaire | insight opérationnel + honnêteté |
 
 Coût : **1 000 cas en ~11 min, 2,7 M tokens**, cache par cas + backoff sur la clé partagée.

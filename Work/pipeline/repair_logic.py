@@ -41,10 +41,17 @@ _ACTION_TO_OP = {
 }
 
 
+_NON_COMMITTING = {ExplizitAktion.PRUEFEN, ExplizitAktion.KALIBRIEREN}
+
+
 def _primary_ops(s: Schadenposition) -> list[tuple[OpType, OpSource]]:
     """Main operation(s) for one damage entry, with provenance."""
     if s.explizite_aktionen:
         ops = [(_ACTION_TO_OP[a], OpSource.NOTIZ_EXPLIZIT) for a in s.explizite_aktionen]
+        # A note that only says "inspect"/"calibrate" is not a repair decision:
+        # never invent a severity-driven Replace (and its R&I cascade) from it.
+        if all(a in _NON_COMMITTING for a in s.explizite_aktionen):
+            return ops
         if not any(o in (OpType.ERSETZEN, OpType.INSTANDSETZEN, OpType.POLIEREN) for o, _ in ops):
             ops += _severity_ops(s)
         return ops
