@@ -58,6 +58,7 @@ export function getNavData(lang: string): NavSectionProps['data'] {
           info: <Label>1000</Label>,
         },
         { title: de ? 'Fälle' : 'Cases', path: paths.dashboard.cases, icon: ICONS.order },
+        { title: 'Model Lab', path: paths.dashboard.lab, icon: ICONS.analytics },
       ],
     },
   ];

@@ -133,6 +133,26 @@ const UI: Record<string, { de: string; en: string }> = {
     de: 'Maschinelle Übersetzung (DeepSeek) — das deutsche Original bleibt maßgeblich.',
     en: 'Machine translation (DeepSeek) — the German original remains authoritative.',
   },
+  labTitle: { de: 'Model Lab — Schweregrad', en: 'Model Lab — severity' },
+  labIntro: {
+    de: 'Benchmark der Schweregrad-Klassifikation: LLM (DeepSeek) vs. klassische ML-Modelle vs. ein feinjustierter deutscher BERT — alle auf denselben 150 Testfällen.',
+    en: 'Severity-classification benchmark: LLM (DeepSeek) vs. classic ML models vs. a fine-tuned German BERT — all on the same 150 test cases.',
+  },
+  labLive: { de: 'Live ausprobieren', en: 'Try it live' },
+  labLiveSub: {
+    de: 'Läuft komplett im Browser (exportierte Logistische Regression). Tippe eine deutsche Notiz.',
+    en: 'Runs entirely in your browser (exported Logistic Regression). Type a German note.',
+  },
+  labPrediction: { de: 'Vorhersage', en: 'Prediction' },
+  labBench: { de: 'Benchmark', en: 'Benchmark' },
+  labBenchSub: { de: 'Genauigkeit auf {n} ungesehenen Testfällen', en: 'Accuracy on {n} held-out test cases' },
+  labCeiling: { de: 'Obergrenze', en: 'ceiling' },
+  labCaveat: {
+    de: 'Auf synthetischen Daten scoren die trainierten Modelle hoch, weil TF-IDF ihnen die Phrasen-Bibliothek des Generators liefert (Auswendiglernen). DeepSeek generalisiert dagegen auf echte Notizen. Keiner durchbricht die ~79,5%-Datengrenze belastbar.',
+    en: 'On synthetic data the trained models score high because TF-IDF hands them the generator\'s phrase library (memorization). DeepSeek instead generalizes to real notes. None robustly breaks the ~79.5% data ceiling.',
+  },
+  labCaseByCase: { de: 'Fall für Fall', en: 'Case by case' },
+  labPickCase: { de: 'Testfall wählen', en: 'Pick a test case' },
 };
 
 export function useLang() {

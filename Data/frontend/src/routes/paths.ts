@@ -45,6 +45,7 @@ export const paths = {
     root: ROOTS.DASHBOARD,
     cases: `${ROOTS.DASHBOARD}/cases`,
     caseDetail: (id: number | string) => `${ROOTS.DASHBOARD}/cases/${id}`,
+    lab: `${ROOTS.DASHBOARD}/lab`,
     two: `${ROOTS.DASHBOARD}/two`,
     three: `${ROOTS.DASHBOARD}/three`,
     group: {
