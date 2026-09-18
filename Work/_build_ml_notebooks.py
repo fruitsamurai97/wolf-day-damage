@@ -41,7 +41,7 @@ print(f"{MODEL_NAME} accuracy: {acc*100:.1f}%")'''
 
 COMPARE = '''ds = deepseek_accuracy_on(test)
 gb = json.load(open(Path(r"{pipe}")/"gbert_result.json", encoding="utf-8"))["accuracy"]
-CEIL = 0.795
+CEIL = 0.887  # descriptor ceiling ON THESE 150 (the full-977 ceiling is 79.5% — different set)
 bars = {{"DeepSeek\\n(LLM)": ds, MODEL_NAME: acc, "gbert\\n(GPU)": gb}}
 fig, ax = plt.subplots(figsize=(6,3))
 xs = list(bars); ys = [bars[k]*100 for k in xs]
@@ -49,7 +49,7 @@ colors = [BLUE, ORANGE, BLUE]
 ax.bar(xs, ys, color=colors, width=.6)
 for i,v in enumerate(ys): ax.text(i, v+1, f"{{v:.1f}}%", ha="center", fontsize=9)
 ax.axhline(CEIL*100, color="#c0392b", ls="--", lw=1.2)
-ax.text(2.4, CEIL*100+0.5, "ceiling 79.5%", color="#c0392b", fontsize=8, ha="right")
+ax.text(2.4, CEIL*100+0.5, "ceiling 88.7% (on these 150)", color="#c0392b", fontsize=8, ha="right")
 ax.set_ylim(0,100); ax.set_ylabel("accuracy on same 150"); ax.set_title("Severity: this model vs DeepSeek vs the data ceiling")
 plt.tight_layout(); plt.show()'''.format(pipe=PIPE)
 
@@ -82,7 +82,7 @@ for fname, name, train_code, blurb in NOTEBOOKS:
 
 **Fair protocol.** Every contender (this model, the other two, gbert, and DeepSeek) is scored on the **exact same 150 held-out damage cases** (`ml_common.make_split`, seed 42, the 23 LLM-dev cases excluded). No GPU needed here — these train in seconds on CPU. The GPU only serves the neural contender (gbert), in its own step.
 
-**What to expect.** We proved a **~79.5% ceiling**: this synthetic corpus partly decorrelates severity from wording (the identical sentence appears labeled light, medium and severe in different cases). So a model that scores *very* high is memorizing the generator's closed phrase library, not understanding severity — and would collapse on real workshop notes. Watch the variance across the three models: that spread is the tell.'''),
+**What to expect.** This synthetic corpus partly decorrelates severity from wording (the identical sentence appears labeled light, medium and severe in different cases), so there is a hard information ceiling: **~88.7% on these 150 cases** (and ~79.5% on the full 977 — the ceiling depends on the set). A model that scores *very* high is memorizing the generator's closed phrase library, not understanding severity — and would collapse on real workshop notes. Watch the variance across the three models: that spread is the tell.'''),
         nbf.v4.new_code_cell(HEADER),
         nbf.v4.new_markdown_cell("## Train"),
         nbf.v4.new_code_cell(f'MODEL_NAME = "{name}"\n' + train_code),
@@ -92,7 +92,7 @@ for fname, name, train_code, blurb in NOTEBOOKS:
         nbf.v4.new_code_cell(COMPARE),
         nbf.v4.new_markdown_cell('''## Honest conclusion
 
-On this **synthetic** test the trained models land around the ceiling — sometimes above DeepSeek — because TF-IDF hands them the generator's exact phrase library and they memorize the wording→label map from 284 labeled examples. DeepSeek gets no training and works from a hand-written rubric, so it sits slightly lower here **but generalizes**: on real production notes ("Frontschürze", "Stoßfänger", typos, unseen phrasings) the memorized vocabulary breaks and the rubric keeps working. The high variance between the three trained models (they disagree by >15 points on the same data) is itself evidence they fit the corpus, not the concept. None of them break the ~79.5% ceiling in a way that survives — because the ceiling is a property of the **data**, not the model. That is the point we make at the fireside: we benchmarked linear, trees and a fine-tuned German transformer; all four converge on the same wall.'''),
+On this **synthetic** test the trained models score high — sometimes above DeepSeek — because TF-IDF hands them the generator's exact phrase library and they memorize the wording→label map from 284 labeled examples. DeepSeek gets no training and works from a hand-written rubric, so it sits slightly lower here **but generalizes**: on real production notes ("Frontschürze", "Stoßfänger", typos, unseen phrasings) the memorized vocabulary breaks and the rubric keeps working. The real overfitting tell is the **variance**: LightGBM (65%) and XGBoost (82%), two near-identical boosting algorithms, disagree by 17 points on the same data — they fit the corpus, not the concept. None of them breaks the **88.7% ceiling** for these 150 cases — because the ceiling is a property of the **data**, not the model. That is the fireside point: we benchmarked linear, trees and a fine-tuned German transformer; all four hit the same wall.'''),
     ]
     nb.cells = cells
     nb.metadata.kernelspec = {"display_name": "Python 3", "language": "python", "name": "python3"}

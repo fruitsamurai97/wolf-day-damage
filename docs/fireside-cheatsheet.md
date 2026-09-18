@@ -11,8 +11,8 @@ On reçoit 1 000 dossiers où l'info de dommage est enfermée dans des **notes a
 | # | Chiffre | Ce qu'il prouve |
 |---|---|---|
 | 1 | **99,9 % F1 zones · 100 % type de cas · 100 % assurance · 100 % citations verbatim · 0 perdu** (sur 977 cas jamais vus) | l'extraction est fiable et mesurée, pas affirmée |
-| 2 | **Sévérité DeepSeek 72,7 %** (sur 150) vs **plafond 79,5 %** | on capte ~86 % du signal *extractible* |
-| 3 | **XGBoost 82,0 % > plafond 79,5 %** ; LightGBM **65,3 %** | preuve d'overfitting (voir ci-dessous) |
+| 2 | **Sévérité DeepSeek 68,7 %** vs **plafond 79,5 %** (mêmes 977 cas) | on capte ~86 % du signal *extractible* |
+| 3 | Shootout /150 : XGBoost **82,0 %** · LightGBM **65,3 %** (écart 17 pts) | overfitting : ils mémorisent (voir §questions) |
 | 4 | **216 remplacements → 389 opérations de dépose/repose (R&I)** | du travail facturable invisible dans la note brute |
 | 5 | **668 dossiers ouverts, âge médian 150 j** · **41,3 %** = parking/manœuvre · **2 seuls termes** hors vocabulaire | insight opérationnel + honnêteté |
 
@@ -26,7 +26,7 @@ Coût : **1 000 cas en ~11 min, 2,7 M tokens**, cache par cas + backoff sur la c
 Parce que le regex gagne *seulement* parce que le corpus est synthétique (noms de pièces écrits pile comme le vocabulaire). Sur de vraies notes (« Frontschürze », fautes), il s'effondre. Et il fait **0 % sur la sévérité** (jamais écrite) et **76 % sur l'assurance** (tournures à comprendre). Le LLM gagne là où le texte demande de la compréhension, et il produit la **structure imbriquée** (pièce↔dommage↔citation) qui alimente le dessin.
 
 **« Pourquoi pas un modèle de classification pour la sévérité ? »**
-On l'a fait — LogReg, XGBoost, LightGBM, et même un **BERT allemand fine-tuné sur le GPU**. Résultat : **XGBoost 82 % dépasse le plafond de 79,5 %**. Or ce plafond est le max qu'un lecteur *parfait* pourrait atteindre, car le générateur découple partiellement la gravité du texte (61 cas sans indice ; la **phrase identique** apparaît étiquetée légère, moyenne ET grave). Battre ce plafond = **mémoriser le vocabulaire du générateur**, pas comprendre. LightGBM à 65 % vs XGBoost à 82 % (17 pts d'écart) confirme : ils collent au bruit. **Le meilleur score est le moins fiable.** On livre la sévérité DeepSeek qui généralise.
+On l'a fait — LogReg, XGBoost, LightGBM, et un **BERT allemand fine-tuné sur GPU**, tous notés sur les **mêmes 150** cas. La preuve d'overfitting c'est **l'écart de 17 pts** entre LightGBM (65 %) et XGBoost (82 %), deux algos quasi identiques : ils **mémorisent la bibliothèque de phrases** du générateur (vocabulaire fermé via TF-IDF), ils ne *comprennent* pas la gravité. **Le meilleur score est le moins fiable** — sur de vraies notes ça s'effondre ; on livre la sévérité DeepSeek qui généralise. ⚠️ Ne PAS opposer le plafond 79,5 % (calculé sur 977) à ces scores sur 150 : sur les 150, le plafond est ~88,7 % et **aucun modèle ne le franchit**. Le « plafond » sert à expliquer que la limite est dans les **données** (la phrase identique à 3 étiquettes), pas à dire « X bat le plafond ».
 
 **« 68,7 % de sévérité, c'est faible. »**
 C'est **86 % du plafond démontré (79,5 %)**. La limite est dans les **données**, pas le modèle — et on le prouve avec la phrase identique à 3 étiquettes. On a choisi l'honnêteté plutôt que de sur-régler sur le test.

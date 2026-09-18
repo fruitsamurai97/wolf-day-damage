@@ -97,5 +97,5 @@ comparison = {
 (FRONT_DATA / "model_comparison.json").write_text(json.dumps(comparison, ensure_ascii=False), encoding="utf-8")
 print(f"\nDeepSeek (same 150):   {ds_acc*100:5.1f}%")
 print(f"gbert (same 150):      {gbert['accuracy']*100:5.1f}%")
-print(f"ceiling:                79.5%")
+print(f"ceiling (150): 88.7%  |  full-977 ceiling: 79.5%")
 print(f"wrote model_comparison.json")
