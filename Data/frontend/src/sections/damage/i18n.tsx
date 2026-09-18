@@ -148,8 +148,8 @@ const UI: Record<string, { de: string; en: string }> = {
   labBenchSub: { de: 'Genauigkeit auf {n} ungesehenen Testfällen', en: 'Accuracy on {n} held-out test cases' },
   labCeiling: { de: 'Obergrenze', en: 'ceiling' },
   labCaveat: {
-    de: 'Auf synthetischen Daten scoren die trainierten Modelle hoch, weil TF-IDF ihnen die Phrasen-Bibliothek des Generators liefert (Auswendiglernen). DeepSeek generalisiert dagegen auf echte Notizen. Keiner durchbricht die ~79,5%-Datengrenze belastbar.',
-    en: 'On synthetic data the trained models score high because TF-IDF hands them the generator\'s phrase library (memorization). DeepSeek instead generalizes to real notes. None robustly breaks the ~79.5% data ceiling.',
+    de: 'Auf synthetischen Daten scoren die trainierten Modelle hoch, weil TF-IDF ihnen die Phrasen-Bibliothek des Generators liefert (Auswendiglernen) — der 17-Punkte-Abstand zwischen LightGBM und XGBoost (zwei fast identische Verfahren) zeigt es. DeepSeek generalisiert dagegen auf echte Notizen; auf den vollen 977 Fällen: 68,7% vs. ~79,5% Datengrenze.',
+    en: 'On synthetic data the trained models score high because TF-IDF hands them the generator\'s phrase library (memorization) — the 17-point gap between LightGBM and XGBoost, two near-identical methods, is the tell. DeepSeek instead generalizes to real notes; on the full 977 cases: 68.7% vs a ~79.5% data ceiling.',
   },
   labCaseByCase: { de: 'Fall für Fall', en: 'Case by case' },
   labPickCase: { de: 'Testfall wählen', en: 'Pick a test case' },

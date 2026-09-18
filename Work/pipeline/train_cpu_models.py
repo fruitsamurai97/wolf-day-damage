@@ -81,7 +81,9 @@ ds_cm = confusion_matrix(
 
 comparison = {
     "n_test": len(test),
-    "ceiling": 0.795,
+    # descriptor-fingerprint oracle ceiling ON THESE 150 (majority label per fingerprint).
+    # NB: the full-977 ceiling is ~0.795; on this 150 subset it is ~0.887. Keep the two apart.
+    "ceiling": 0.887,
     "labels": SEV_LABELS,
     "test": [{"id": r["id"], "note_body": r["note_body"], "severity": r["severity"]} for r in test],
     "models": {
