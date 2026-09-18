@@ -1,0 +1,393 @@
+{
+ "n_cases": 1000,
+ "case_kinds": {
+  "Inspektion": 144,
+  "Parkschaden": 110,
+  "Räder und Reifen": 107,
+  "Bremsen": 103,
+  "HU/AU": 101,
+  "Ölwechsel": 95,
+  "Rangierschaden": 76,
+  "Auffahrunfall": 62,
+  "Steinschlag": 55,
+  "Hagelschaden": 55,
+  "Vandalismus": 48,
+  "Wildunfall": 44
+ },
+ "case_types": {
+  "damage": 450,
+  "service": 550
+ },
+ "severity": {
+  "leicht": 113,
+  "mittel": 169,
+  "schwer": 159
+ },
+ "insurance": {
+  "teilkasko": 140,
+  "selbstzahler": 112,
+  "vollkasko": 80,
+  "haftpflicht_gegner": 75,
+  "gesteuert": 43
+ },
+ "zones": {
+  "Motorhaube": 95,
+  "Heckklappe": 77,
+  "Windschutzscheibe": 55,
+  "Kotflügel vorne rechts": 48,
+  "Dach": 47,
+  "Kotflügel vorne links": 43,
+  "Stoßstange vorne": 42,
+  "Stoßstange vorne rechts": 41,
+  "Stoßstange vorne links": 38,
+  "Stoßstange hinten rechts": 36,
+  "Kotflügel hinten rechts": 36,
+  "Stoßstange hinten": 31,
+  "Stoßstange hinten links": 29,
+  "Kotflügel hinten links": 24,
+  "Tür hinten links": 24,
+  "Schweller links": 21,
+  "Schweller rechts": 19,
+  "Außenspiegel links": 18,
+  "Tür hinten rechts": 18,
+  "Außenspiegel rechts": 17,
+  "Fahrertür": 14,
+  "Beifahrertür": 11
+ },
+ "zone_severity": [
+  {
+   "part": "stossfaenger_vorne",
+   "schweregrad": "mittel",
+   "n": 61
+  },
+  {
+   "part": "stossfaenger_hinten",
+   "schweregrad": "mittel",
+   "n": 48
+  },
+  {
+   "part": "kotfluegel_vorne",
+   "schweregrad": "mittel",
+   "n": 42
+  },
+  {
+   "part": "stossfaenger_vorne",
+   "schweregrad": "leicht",
+   "n": 41
+  },
+  {
+   "part": "windschutzscheibe",
+   "schweregrad": "schwer",
+   "n": 39
+  },
+  {
+   "part": "motorhaube",
+   "schweregrad": "mittel",
+   "n": 35
+  },
+  {
+   "part": "stossfaenger_hinten",
+   "schweregrad": "leicht",
+   "n": 34
+  },
+  {
+   "part": "heckklappe",
+   "schweregrad": "mittel",
+   "n": 29
+  },
+  {
+   "part": "kotfluegel_vorne",
+   "schweregrad": "leicht",
+   "n": 29
+  },
+  {
+   "part": "motorhaube",
+   "schweregrad": "schwer",
+   "n": 28
+  },
+  {
+   "part": "kotfluegel_hinten",
+   "schweregrad": "leicht",
+   "n": 27
+  },
+  {
+   "part": "heckklappe",
+   "schweregrad": "schwer",
+   "n": 27
+  },
+  {
+   "part": "tuer_hinten",
+   "schweregrad": "mittel",
+   "n": 26
+  },
+  {
+   "part": "kotfluegel_hinten",
+   "schweregrad": "mittel",
+   "n": 24
+  },
+  {
+   "part": "dach",
+   "schweregrad": "schwer",
+   "n": 23
+  },
+  {
+   "part": "stossfaenger_vorne",
+   "schweregrad": "schwer",
+   "n": 20
+  },
+  {
+   "part": "kotfluegel_vorne",
+   "schweregrad": "schwer",
+   "n": 20
+  },
+  {
+   "part": "aussenspiegel",
+   "schweregrad": "mittel",
+   "n": 18
+  },
+  {
+   "part": "schweller",
+   "schweregrad": "mittel",
+   "n": 18
+  },
+  {
+   "part": "motorhaube",
+   "schweregrad": "leicht",
+   "n": 18
+  },
+  {
+   "part": "schweller",
+   "schweregrad": "leicht",
+   "n": 16
+  },
+  {
+   "part": "dach",
+   "schweregrad": "mittel",
+   "n": 15
+  },
+  {
+   "part": "tuer_vorne",
+   "schweregrad": "mittel",
+   "n": 15
+  },
+  {
+   "part": "stossfaenger_hinten",
+   "schweregrad": "schwer",
+   "n": 14
+  },
+  {
+   "part": "aussenspiegel",
+   "schweregrad": "leicht",
+   "n": 14
+  },
+  {
+   "part": "motorhaube",
+   "schweregrad": "unbekannt",
+   "n": 14
+  },
+  {
+   "part": "heckklappe",
+   "schweregrad": "leicht",
+   "n": 12
+  },
+  {
+   "part": "tuer_hinten",
+   "schweregrad": "leicht",
+   "n": 11
+  },
+  {
+   "part": "dach",
+   "schweregrad": "unbekannt",
+   "n": 9
+  },
+  {
+   "part": "kotfluegel_hinten",
+   "schweregrad": "schwer",
+   "n": 9
+  },
+  {
+   "part": "heckklappe",
+   "schweregrad": "unbekannt",
+   "n": 9
+  },
+  {
+   "part": "windschutzscheibe",
+   "schweregrad": "mittel",
+   "n": 8
+  },
+  {
+   "part": "tuer_vorne",
+   "schweregrad": "leicht",
+   "n": 8
+  },
+  {
+   "part": "windschutzscheibe",
+   "schweregrad": "unbekannt",
+   "n": 8
+  },
+  {
+   "part": "schweller",
+   "schweregrad": "schwer",
+   "n": 6
+  },
+  {
+   "part": "tuer_hinten",
+   "schweregrad": "schwer",
+   "n": 5
+  },
+  {
+   "part": "aussenspiegel",
+   "schweregrad": "schwer",
+   "n": 3
+  },
+  {
+   "part": "tuer_vorne",
+   "schweregrad": "schwer",
+   "n": 2
+  }
+ ],
+ "zone_cooccurrence": {
+  "Heckklappe + Motorhaube": 44,
+  "Dach + Motorhaube": 42,
+  "Dach + Heckklappe": 40,
+  "Kotflügel vorne rechts + Stoßstange vorne links": 7,
+  "Kotflügel vorne rechts + Stoßstange vorne": 6,
+  "Stoßstange vorne + Stoßstange vorne links": 6,
+  "Stoßstange hinten rechts + Stoßstange vorne": 6,
+  "Kotflügel hinten rechts + Kotflügel vorne links": 6,
+  "Kotflügel hinten rechts + Kotflügel vorne rechts": 6,
+  "Kotflügel hinten links + Kotflügel hinten rechts": 5,
+  "Kotflügel hinten links + Motorhaube": 5,
+  "Heckklappe + Stoßstange hinten rechts": 5,
+  "Kotflügel vorne rechts + Motorhaube": 5,
+  "Kotflügel vorne rechts + Stoßstange vorne rechts": 5,
+  "Motorhaube + Stoßstange vorne rechts": 5
+ },
+ "ops_replace_by_part": {
+  "windschutzscheibe": 47,
+  "motorhaube": 30,
+  "heckklappe": 27,
+  "stossfaenger_vorne": 26,
+  "dach": 23,
+  "kotfluegel_vorne": 21,
+  "stossfaenger_hinten": 15,
+  "kotfluegel_hinten": 10,
+  "schweller": 6,
+  "tuer_hinten": 5,
+  "aussenspiegel": 4,
+  "tuer_vorne": 2
+ },
+ "ops_ri_by_part": {
+  "zierleiste_anbauteil": 108,
+  "rueckleuchte": 92,
+  "scheinwerfer": 71,
+  "kuehlergrill": 26,
+  "windschutzscheibe": 23,
+  "stossfaenger_vorne": 17,
+  "tuer_hinten": 16,
+  "tuerverkleidung": 11,
+  "stossfaenger_hinten": 10,
+  "seitenscheibe": 7,
+  "tuer_vorne": 6,
+  "aussenspiegel": 2
+ },
+ "nebenbefunde_top": {
+  "Innenraumfilter riecht, mit tauschen": 47,
+  "Klappern vorne rechts bei Bodenwellen": 47,
+  "Scheibenwischer schmieren, bitte erneuern": 41,
+  "Servicerückstellung nicht erfolgt, bitte mitmachen": 40,
+  "Klimaanlage kühlt schlecht, bitte prüfen": 40,
+  "Kontrollleuchte Reifendruck ist an": 35,
+  "Batterie schwach, Startprobleme morgens": 35,
+  "Kunde meldet Vibration ab 120 km/h": 29,
+  "Kunde meldet Geräusch beim Lenken": 28,
+  "Softwarestand prüfen, Rückruf offen": 23,
+  "Bitte Softwarestand prüfen, Rückruf offen": 18,
+  "Bremsscheiben hinten riefig": 11
+ },
+ "kunden_anliegen_top": {
+  "Leihwagen ja": 164,
+  "Kunde wartet vor Ort": 90,
+  "Hol- und Bringservice gewünscht": 87,
+  "Hol- und Bringservice ja": 79,
+  "Abholung durch Kunde am Nachmittag": 73,
+  "Kunde wünscht Kostenrahmen vorab": 72,
+  "Kunde holt am Abend ab": 64,
+  "Ersatzwagen geklärt, Klasse klein": 64,
+  "Bitte anrufen wenn mehr anfällt als besprochen": 64,
+  "Leihwagen nein, Kunde wartet": 62,
+  "Kunde wartet, bitte zügig": 60,
+  "Kunde fragt nach Ersatzwagen": 60
+ },
+ "makes": {
+  "VW": 175,
+  "Audi": 144,
+  "Mercedes": 141,
+  "BMW": 135,
+  "Skoda": 134,
+  "Ford": 97,
+  "Seat": 87,
+  "Opel": 87
+ },
+ "cases_per_month": {
+  "2026-01": 144,
+  "2026-02": 132,
+  "2026-03": 130,
+  "2026-04": 142,
+  "2026-05": 123,
+  "2026-06": 138,
+  "2026-07": 139,
+  "2026-08": 52
+ },
+ "open_cases": {
+  "n": 668,
+  "median_age_days": 150
+ },
+ "sb_amounts": {
+  "150": 105,
+  "300": 50,
+  "500": 42
+ },
+ "generated_at": "2026-09-18T13:16:30",
+ "reliability": {
+  "n_test": 977,
+  "n_dev": 20,
+  "deepseek_test": {
+   "n": 977,
+   "kind_acc": 1.0,
+   "type_acc": 1.0,
+   "zones_precision": 1.0,
+   "zones_recall": 0.9986702127659575,
+   "zones_f1": 0.9993346640053227,
+   "zones_tp": 751,
+   "zones_fp": 0,
+   "zones_fn": 1,
+   "severity_acc": 0.6866359447004609,
+   "severity_n": 434,
+   "insurance_acc": 1.0,
+   "insurance_n": 434
+  },
+  "baseline_test": {
+   "n": 977,
+   "kind_acc": 0.9918116683725691,
+   "type_acc": 1.0,
+   "zones_precision": 1.0,
+   "zones_recall": 1.0,
+   "zones_f1": 1.0,
+   "zones_tp": 752,
+   "zones_fp": 0,
+   "zones_fn": 0,
+   "severity_acc": 0.0,
+   "severity_n": 434,
+   "insurance_acc": 0.7603686635944701,
+   "insurance_n": 434
+  },
+  "quote_verbatim_rate": 1.0,
+  "flagged_cases": [],
+  "retried_cases": [],
+  "unmapped_terms": {
+   "Bremsscheiben": 3,
+   "Aufnahme": 2
+  }
+ }
+}

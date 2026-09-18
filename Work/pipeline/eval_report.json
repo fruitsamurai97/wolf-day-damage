@@ -1,0 +1,682 @@
+{
+ "n_total": 997,
+ "n_test": 977,
+ "n_dev": 20,
+ "wall_seconds": 649,
+ "prompt_tokens": 2528230,
+ "completion_tokens": 147861,
+ "flagged_cases": [],
+ "retried_cases": [],
+ "quote_verbatim_rate": 1.0,
+ "non_verbatim_quotes": [],
+ "unmapped_terms": {
+  "Bremsscheiben": 3,
+  "Aufnahme": 2
+ },
+ "deepseek": {
+  "all": {
+   "n": 997,
+   "kind_acc": 1.0,
+   "type_acc": 1.0,
+   "zones_precision": 1.0,
+   "zones_recall": 0.998719590268886,
+   "zones_f1": 0.9993593850096092,
+   "zones_tp": 780,
+   "zones_fp": 0,
+   "zones_fn": 1,
+   "severity_acc": 0.6941964285714286,
+   "severity_n": 448,
+   "insurance_acc": 1.0,
+   "insurance_n": 448
+  },
+  "test": {
+   "n": 977,
+   "kind_acc": 1.0,
+   "type_acc": 1.0,
+   "zones_precision": 1.0,
+   "zones_recall": 0.9986702127659575,
+   "zones_f1": 0.9993346640053227,
+   "zones_tp": 751,
+   "zones_fp": 0,
+   "zones_fn": 1,
+   "severity_acc": 0.6866359447004609,
+   "severity_n": 434,
+   "insurance_acc": 1.0,
+   "insurance_n": 434
+  }
+ },
+ "baseline": {
+  "all": {
+   "n": 997,
+   "kind_acc": 0.9919759277833501,
+   "type_acc": 1.0,
+   "zones_precision": 1.0,
+   "zones_recall": 1.0,
+   "zones_f1": 1.0,
+   "zones_tp": 781,
+   "zones_fp": 0,
+   "zones_fn": 0,
+   "severity_acc": 0.0,
+   "severity_n": 448,
+   "insurance_acc": 0.7589285714285714,
+   "insurance_n": 448
+  },
+  "test": {
+   "n": 977,
+   "kind_acc": 0.9918116683725691,
+   "type_acc": 1.0,
+   "zones_precision": 1.0,
+   "zones_recall": 1.0,
+   "zones_f1": 1.0,
+   "zones_tp": 752,
+   "zones_fp": 0,
+   "zones_fn": 0,
+   "severity_acc": 0.0,
+   "severity_n": 434,
+   "insurance_acc": 0.7603686635944701,
+   "insurance_n": 434
+  }
+ },
+ "deepseek_mismatches_test": [
+  [
+   821218,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   821300,
+   "severity",
+   "mittel",
+   "schwer"
+  ],
+  [
+   821324,
+   "severity",
+   "schwer",
+   "leicht"
+  ],
+  [
+   822950,
+   "severity",
+   "schwer",
+   "leicht"
+  ],
+  [
+   823116,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   824529,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   825880,
+   "severity",
+   "None",
+   "schwer"
+  ],
+  [
+   826178,
+   "severity",
+   "mittel",
+   "schwer"
+  ],
+  [
+   828461,
+   "severity",
+   "schwer",
+   "leicht"
+  ],
+  [
+   829072,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   829369,
+   "severity",
+   "mittel",
+   "schwer"
+  ],
+  [
+   829622,
+   "severity",
+   "schwer",
+   "leicht"
+  ],
+  [
+   829689,
+   "severity",
+   "mittel",
+   "schwer"
+  ],
+  [
+   830087,
+   "severity",
+   "mittel",
+   "leicht"
+  ],
+  [
+   830105,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   830220,
+   "severity",
+   "None",
+   "mittel"
+  ],
+  [
+   830295,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   831146,
+   "severity",
+   "schwer",
+   "leicht"
+  ],
+  [
+   831722,
+   "severity",
+   "mittel",
+   "schwer"
+  ],
+  [
+   832361,
+   "severity",
+   "mittel",
+   "schwer"
+  ],
+  [
+   833075,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   833141,
+   "severity",
+   "schwer",
+   "leicht"
+  ],
+  [
+   833500,
+   "severity",
+   "mittel",
+   "schwer"
+  ],
+  [
+   833936,
+   "severity",
+   "None",
+   "schwer"
+  ],
+  [
+   834217,
+   "zone-",
+   "missed",
+   "Stoßstange vorne"
+  ],
+  [
+   834742,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   834979,
+   "severity",
+   "schwer",
+   "leicht"
+  ],
+  [
+   835597,
+   "severity",
+   "mittel",
+   "leicht"
+  ],
+  [
+   835914,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   836898,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   837549,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   837732,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   837765,
+   "severity",
+   "schwer",
+   "leicht"
+  ],
+  [
+   837956,
+   "severity",
+   "mittel",
+   "schwer"
+  ],
+  [
+   838355,
+   "severity",
+   "schwer",
+   "leicht"
+  ],
+  [
+   838742,
+   "severity",
+   "schwer",
+   "leicht"
+  ],
+  [
+   839086,
+   "severity",
+   "mittel",
+   "leicht"
+  ],
+  [
+   839757,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   840632,
+   "severity",
+   "schwer",
+   "leicht"
+  ],
+  [
+   841376,
+   "severity",
+   "mittel",
+   "schwer"
+  ],
+  [
+   841770,
+   "severity",
+   "mittel",
+   "leicht"
+  ],
+  [
+   841953,
+   "severity",
+   "schwer",
+   "leicht"
+  ],
+  [
+   843151,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   843740,
+   "severity",
+   "schwer",
+   "leicht"
+  ],
+  [
+   843743,
+   "severity",
+   "mittel",
+   "leicht"
+  ],
+  [
+   843833,
+   "severity",
+   "schwer",
+   "leicht"
+  ],
+  [
+   844069,
+   "severity",
+   "mittel",
+   "leicht"
+  ],
+  [
+   845725,
+   "severity",
+   "mittel",
+   "leicht"
+  ],
+  [
+   845852,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   846074,
+   "severity",
+   "schwer",
+   "leicht"
+  ],
+  [
+   846256,
+   "severity",
+   "mittel",
+   "schwer"
+  ],
+  [
+   846368,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   846562,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   846743,
+   "severity",
+   "None",
+   "mittel"
+  ],
+  [
+   846807,
+   "severity",
+   "schwer",
+   "leicht"
+  ],
+  [
+   846978,
+   "severity",
+   "schwer",
+   "leicht"
+  ],
+  [
+   847522,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   848366,
+   "severity",
+   "mittel",
+   "leicht"
+  ],
+  [
+   848413,
+   "severity",
+   "leicht",
+   "mittel"
+  ],
+  [
+   849165,
+   "severity",
+   "schwer",
+   "leicht"
+  ],
+  [
+   849458,
+   "severity",
+   "mittel",
+   "leicht"
+  ],
+  [
+   851094,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   852729,
+   "severity",
+   "mittel",
+   "leicht"
+  ],
+  [
+   852844,
+   "severity",
+   "schwer",
+   "leicht"
+  ],
+  [
+   853563,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   853680,
+   "severity",
+   "schwer",
+   "leicht"
+  ],
+  [
+   853741,
+   "severity",
+   "mittel",
+   "leicht"
+  ],
+  [
+   854548,
+   "severity",
+   "None",
+   "mittel"
+  ],
+  [
+   854904,
+   "severity",
+   "leicht",
+   "mittel"
+  ],
+  [
+   856050,
+   "severity",
+   "schwer",
+   "leicht"
+  ],
+  [
+   856238,
+   "severity",
+   "schwer",
+   "leicht"
+  ],
+  [
+   857129,
+   "severity",
+   "mittel",
+   "leicht"
+  ],
+  [
+   857882,
+   "severity",
+   "schwer",
+   "leicht"
+  ],
+  [
+   858295,
+   "severity",
+   "None",
+   "leicht"
+  ],
+  [
+   859320,
+   "severity",
+   "mittel",
+   "schwer"
+  ],
+  [
+   859595,
+   "severity",
+   "schwer",
+   "leicht"
+  ],
+  [
+   860024,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   860433,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   860578,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   860598,
+   "severity",
+   "schwer",
+   "leicht"
+  ],
+  [
+   861554,
+   "severity",
+   "leicht",
+   "mittel"
+  ],
+  [
+   861868,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   862159,
+   "severity",
+   "mittel",
+   "schwer"
+  ],
+  [
+   862480,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   863220,
+   "severity",
+   "schwer",
+   "leicht"
+  ],
+  [
+   863452,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   863652,
+   "severity",
+   "mittel",
+   "schwer"
+  ],
+  [
+   863853,
+   "severity",
+   "schwer",
+   "leicht"
+  ],
+  [
+   864888,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   864985,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   865356,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   865619,
+   "severity",
+   "mittel",
+   "schwer"
+  ],
+  [
+   867012,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   867746,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   868307,
+   "severity",
+   "schwer",
+   "leicht"
+  ],
+  [
+   871270,
+   "severity",
+   "schwer",
+   "mittel"
+  ],
+  [
+   871366,
+   "severity",
+   "schwer",
+   "leicht"
+  ],
+  [
+   873092,
+   "severity",
+   "schwer",
+   "leicht"
+  ],
+  [
+   874740,
+   "severity",
+   "mittel",
+   "leicht"
+  ],
+  [
+   874843,
+   "severity",
+   "mittel",
+   "schwer"
+  ]
+ ]
+}
