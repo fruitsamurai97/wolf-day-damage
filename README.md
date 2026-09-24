@@ -7,6 +7,14 @@ Wolf Day hackathon · Track B — DaiL · Casablanca AI Lab
 
 ---
 
+## Demo
+
+[![Damage Intelligence — product tour](docs/damage-intelligence-demo.jpg)](docs/damage-intelligence-demo.mp4)
+
+*A ~20-second tour: tap a case → inspect the color-coded **3D damage** → scroll to the auto-generated **repair plan**. ▶️ [Play / download the MP4](docs/damage-intelligence-demo.mp4)*
+
+---
+
 ## The problem
 Car dealerships log vehicle damage as unstructured German notes — no schema, inconsistent wording, and severity almost never stated explicitly. That text can't be searched, analysed, or turned into a repair plan at scale. The Track B brief: take a working prototype to a **production-ready** product.
 
