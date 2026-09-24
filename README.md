@@ -31,12 +31,9 @@ DeepSeek vs. classic ML (Logistic Regression / XGBoost / LightGBM) vs. a fine-tu
 
 ## Repository layout
 ```
-Dataset/              Track B data kit (provided by the organizers)
 Data/
-  CHALLENGE.md          challenge brief (organizers)
   frontend/             Next.js dashboard — the live app (Vercel root dir)
     public/data/*.json  data-driven inputs (cases, aggregates, model comparison)
-  reference-demo/       organizers' reference demo
   *.pptx                presentation deck (final: Damage_Intelligence_EN_v2.pptx)
   wolf-day-qr.png       QR to the live demo
 Work/
@@ -83,4 +80,4 @@ python train_cpu_models.py # LogReg / XGBoost / LightGBM (CPU)
 - **2 out-of-vocabulary terms** in the entire corpus — flagged, never dropped.
 
 ## Data & credits
-`Dataset/`, `Data/CHALLENGE.md`, `Data/DATASET.md` and `Data/reference-demo/` are **materials provided by the organizers** (DaiL · Casablanca AI Lab), included for reproducibility. All other code and analysis are the author's own.
+The Track B dataset, challenge brief and reference demo are **provided separately by the organizers** (DaiL · Casablanca AI Lab) and are **not redistributed** in this repository. To run the pipeline end-to-end, drop the data kit under `Dataset/`. All other code and analysis are the author's own.

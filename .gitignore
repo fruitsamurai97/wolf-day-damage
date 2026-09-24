@@ -41,3 +41,9 @@ Thumbs.db
 
 # ---- local deploy snapshot (not part of the repo) ----
 hackathon-deploy-snapshot/
+
+# ---- organizers' data & materials (provided separately, not redistributed) ----
+Dataset/
+Data/CHALLENGE.md
+Data/DATASET.md
+Data/reference-demo/
