@@ -11,7 +11,7 @@ Wolf Day hackathon · Track B — DaiL · Casablanca AI Lab
 
 ![Damage Intelligence — product tour](docs/damage-intelligence-demo.gif)
 
-*A ~20-second tour: tap a case → inspect the color-coded **3D damage** → scroll to the auto-generated **repair plan**. ▶️ [Full clip with sound (MP4)](docs/damage-intelligence-demo.mp4)*
+*A ~20-second tour: tap a case → inspect the color-coded **3D damage** → scroll to the auto-generated **repair plan**. ▶️ Try the live app: [wolf-day-damage.vercel.app/dashboard](https://wolf-day-damage.vercel.app/dashboard)*
 
 ---
 
