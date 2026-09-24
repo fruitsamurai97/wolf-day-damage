@@ -2,7 +2,7 @@
 
 Turning messy, free-text **German** car-damage notes into reliable, **structured** data — and two connected views from a single record: a **data-driven car diagram** (2D + 3D) and a **corpus dashboard**.
 
-🥇 **1st place** — Wolf Day hackathon (DaiL · Casablanca AI Lab)
+Wolf Day hackathon · Track B — DaiL · Casablanca AI Lab
 🔗 **Live demo:** https://wolf-day-damage.vercel.app/dashboard
 
 ---
