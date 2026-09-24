@@ -37,3 +37,7 @@ Work/pipeline/cache/
 .DS_Store
 Thumbs.db
 *.swp
+~$*
+
+# ---- local deploy snapshot (not part of the repo) ----
+hackathon-deploy-snapshot/

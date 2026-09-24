@@ -1,0 +1,22 @@
+# Python dependencies for the Damage Intelligence pipeline.
+# Derived from the imports in Work/pipeline/*.py. Unpinned on purpose
+# (hackathon repo); pin versions if you need reproducible installs.
+
+# --- Core: extraction + evaluation + dashboard build ---
+openai            # DeepSeek via the OpenAI-compatible client
+python-dotenv     # loads DEEPSEEK_API_KEY from .env.local
+pydantic          # closed-vocabulary schema + validation
+tenacity          # exponential backoff on the API
+pandas
+numpy
+
+# --- Severity model shootout (CPU) ---
+scikit-learn      # TF-IDF + Logistic Regression, metrics, split
+xgboost
+lightgbm
+joblib            # saves/loads the .joblib models
+
+# --- German BERT fine-tune (GPU only) — optional ---
+torch
+transformers
+datasets
